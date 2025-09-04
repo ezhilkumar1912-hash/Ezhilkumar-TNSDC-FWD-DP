@@ -1,0 +1,153 @@
+body {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    height: 100vh;
+
+    margin: 0;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    background-color: #e3f2fd; /* Light blue background */
+
+}
+
+.audio-player {
+
+    background-color: #ffffff;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+
+    width: 350px;
+
+    text-align: center;
+
+}
+
+#audioFile {
+
+    margin-bottom: 20px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 5px;
+
+    padding: 10px;
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+}
+
+.controls {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 20px;
+
+}
+
+#playPauseBtn {
+
+    padding: 12px 24px;
+
+    border: none;
+
+    background-color: #1a73e8; /* Google-like blue */
+
+    color: white;
+
+    border-radius: 50px; /* Pill-shaped button */
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    transition: background-color 0.3s, transform 0.1s;
+
+}
+
+#playPauseBtn:hover:not(:disabled) {
+
+    background-color: #155cb7;
+
+    transform: scale(1.05);
+
+}
+
+#playPauseBtn:disabled {
+
+    background-color: #cccccc;
+
+    cursor: not-allowed;
+
+}
+
+.timeline {
+
+    flex-grow: 1;
+
+    height: 10px;
+
+    background-color: #e0e0e0;
+
+    border-radius: 5px;
+
+    position: relative;
+
+    cursor: pointer;
+
+    overflow: hidden; /* Ensures progress bar doesn't exceed bounds */
+
+}
+
+.progress-bar {
+
+    height: 100%;
+
+    width: 0%;
+
+    background-color: #1a73e8;
+
+    border-radius: 5px;
+
+    transition: width 0.1s linear; /* Smooth progress bar movement */
+
+}
+
+#currentTime, #duration {
+
+    font-size: 14px;
+
+    color: #555;
+
+    white-space: nowrap; /* Prevents wrapping */
+
+}
+
+.time-info {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    width: 100%;
+
+    margin-top: 10px;
+
+}
